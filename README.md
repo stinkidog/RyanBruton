@@ -1,2 +1,0 @@
-# RyanBruton
-Personal Website
