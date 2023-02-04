@@ -1,19 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './Layout/Header';
+import Body from './Layout/Main';
+import Footer from './Layout/Footer';
+import Container from 'react-bootstrap/Container';
 
 function App() {
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Ryan Bruton
-                </p>
-                <p>
-                    Biz is a rat
-                </p>
-            </header>
-        </div>
+        <Container fluid className="app-main">
+            <Header />
+            <Body />
+            <Footer />
+        </Container>
     );
 }
 
