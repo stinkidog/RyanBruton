@@ -4,6 +4,7 @@
     align-items: center;
     height: 83px;
     background: #0A0A0A;
+    position: sticky; top: 0;
 }
 
 .header__navbar-container {
@@ -47,6 +48,7 @@
     min-width: 210px;
     border-radius: 5px;
     box-shadow: 0px 0px 5px rgba(0,0, 0,0.2);
+    z-index: 1;
 }
 
 @media screen and (max-width: 550px) {

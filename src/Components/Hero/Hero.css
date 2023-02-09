@@ -1,0 +1,48 @@
+.hero{
+    display: flex;
+    flex-direction: row;
+}
+
+.hero__content{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero__content h1{
+    text-align: left;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 107px;
+}
+
+.hero__content-title{
+    color: #ffffff;
+}
+
+.hero__content-subtitle{
+    color: #00FFF0;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 74px;
+}
+
+.hero__content p {
+    text-align: left;
+    color: #ffffff;
+}
+
+.hero__image-container{
+    display: flex;
+    flex: 1;
+}
+
+.hero__image {
+    height: 625px;
+}

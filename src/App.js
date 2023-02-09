@@ -9,6 +9,7 @@ const App = () => {
             <div className="gradient__bg">
                 <Header />
                 <Home />
+                <Home />
                 <AboutMe />
                 <Blog />
                 <Contact />
