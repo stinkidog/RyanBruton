@@ -1,16 +1,20 @@
 import './App.css';
-import Header from './Layout/Header';
-import Body from './Layout/Main';
-import Footer from './Layout/Footer';
-import Container from 'react-bootstrap/Container';
 
-function App() {
+import { AboutMe, Blog, Contact, Footer, Header, Home } from './Containers';
+import { BlogPost, Hero, NavBar } from './Components';
+
+const App = () => {
     return (
-        <Container fluid className="app-main">
-            <Header />
-            <Body />
-            <Footer />
-        </Container>
+        <div className="App">
+            <div className="gradient__bg">
+                <Header />
+                <Home />
+                <AboutMe />
+                <Blog />
+                <Contact />
+                <Footer />
+            </div>
+        </div>
     );
 }
 

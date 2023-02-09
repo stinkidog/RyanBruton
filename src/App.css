@@ -1,3 +1,19 @@
-.app-main{
-    background-color: black;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: black;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+.gradient__bg {
+    background: var(--color-bg);
 }
