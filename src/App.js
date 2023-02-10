@@ -1,18 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+import { AboutMe, Blog, Contact, Footer, Header, Home } from './Containers';
+import { BlogPost, Hero, NavBar } from './Components';
+
+const App = () => {
     return (
         <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Ryan Bruton
-                </p>
-                <p>
-                    Biz is a rat
-                </p>
-            </header>
+            <div className="gradient__bg">
+                <Header />
+                <Home />
+                <AboutMe />
+                <Blog />
+                <Contact />
+                <Footer />
+            </div>
         </div>
     );
 }
