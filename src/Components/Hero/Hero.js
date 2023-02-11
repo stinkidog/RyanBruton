@@ -7,7 +7,7 @@ const Hero = () => {
             <div className="hero__content">
                 <h1 className="hero__content-title">Ryan<br></br>Bruton</h1>
                 <h2 className="hero__content-subtitle">Developer</h2>
-                <div>
+                <div className="hero__content-p">
                     <p>That does handstands*</p>
                     <p>Plays a lot of guitar**</p>
                     <p>Seeking self improvement***</p>
