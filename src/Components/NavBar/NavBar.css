@@ -14,16 +14,16 @@
     gap: 37px;
 }
 
-.header__navbar-container a,
-.header__navbar-menu_container-links a {
+    .header__navbar-container a,
+    .header__navbar-menu_container-links a {
         color: white;
         font-style: normal;
         font-weight: 400;
         font-size: 20px;
         line-height: 28px;
-        font-family: sans-serif;
+        font-family: var(--font-family);
         cursor: pointer;
-}
+    }
 
 .header__navbar-menu{
     display: none;
