@@ -9,9 +9,9 @@ const App = () => {
             <div className="gradient__bg">
                 <Header />
                 <Home />
-                <AboutMe />
-                <Blog />
-                <Contact />
+                {/*<AboutMe />*/}
+                {/*<Blog />*/}
+                {/*<Contact />*/}
                 <Footer />
             </div>
         </div>

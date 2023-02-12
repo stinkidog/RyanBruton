@@ -10,11 +10,11 @@ const Hero = () => {
                 <h1 className="hero__content-title">Ryan<br></br>Bruton</h1>
                 <h2 className="hero__content-subtitle">Developer</h2>
                 <div className="hero__content-p">
-                    <p>That does handstands*</p>
-                    <p>Plays a lot of guitar**</p>
-                    <p>Seeking self improvement***</p>
-                    <p>Can be found riding around on an eboard****</p>
-                    <p>Generally has too many interests*****</p>
+                    <p>That does handstands</p>
+                    <p>Plays a lot of guitar</p>
+                    <p>Seeking self improvement</p>
+                    <p>Can be found riding around on an eboard</p>
+                    <p>Generally has too many interests</p>
                 </div>
                 <IconContext.Provider value={{ color: "white", size: "2em", className: "social" }}>
                     <div className="hero__content-socials">
