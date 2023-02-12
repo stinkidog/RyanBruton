@@ -5,6 +5,7 @@
     height: 83px;
     background: #0A0A0A;
     position: sticky; top: 0;
+    z-index: 1;
 }
 
 .header__navbar-container {
@@ -42,6 +43,7 @@
     background: #0A0A0A;
     padding: 2rem;
     position: absolute;
+    gap: 20px;
     right: -2rem;
     top: 40px;
     margin-top: 1rem;
@@ -66,7 +68,6 @@
     bottom: -5px;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-    animation: appear 0.2s linear;
 }
 
 .link:active::after {
@@ -79,7 +80,7 @@
     bottom: -5px;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-    animation: appear 0.2s linear;
+    animation: appear 0.1s linear;
 }
 
 @keyframes appear{
@@ -104,5 +105,30 @@
     .header__navbar-menu {
         display: flex;
         justify-content: right;
+    }
+
+    .active-link::after {
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: 100%;
+        background-color: aqua;
+        left: 0;
+        bottom: -2px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+
+    .link:active::after {
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: 100%;
+        background-color: aqua;
+        left: 0;
+        bottom: -2px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        animation: appear 0.1s linear;
     }
 }
