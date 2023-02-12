@@ -1,3 +1,10 @@
+@font-face{
+    font-family: "Sansation";
+    src: url("./Assets/sansation/Sansation_Regular.ttf");
+}
+
+
 :root {
     --color-bg: linear-gradient(90deg, #000000 0%, #1C1B1B 53.12%, #000000 100%);
+    --font-family: 'Sansation', sans-serif; 
 }

@@ -3,11 +3,11 @@
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
+    scroll-padding-top: 5.2rem;
 }
 
 body{
     background: black;
-    /*margin: 0rem 5rem 0rem 5rem;*/
 }
 
 a {
