@@ -1,0 +1,32 @@
+.about{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.about__title {
+    color: white;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 107px;
+    text-align: center;
+    padding-top: 3rem;
+}
+
+@media screen and (max-width: 1050px) {
+
+    .about__title{
+        font-size: 80px;
+        padding-top: 0rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .about__title{
+        font-size: 55px;
+    }
+
+}

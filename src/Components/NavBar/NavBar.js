@@ -27,9 +27,9 @@ const NavBar = () => {
         <div className="header__navbar">
             <div className="header__navbar-container">
                 <a className="link active-link" onClick={toggleActive} href="#home">Home</a>
-                <a className="link" onClick={toggleActive} href="#contact">Contact</a>
                 <a className="link" onClick={toggleActive} href="#about">About</a>
                 <a className="link" onClick={toggleActive} href="#blog">Blog</a>
+                <a className="link" onClick={toggleActive} href="#contact">Contact</a>
             </div>
             <div className="header__navbar-menu">
                 {toggleMenu

@@ -35,7 +35,7 @@
 }
 
 .hero__content-p{
-    padding-left: 2.3rem;
+    padding-left: 0.8rem;
 }
 
 .hero__content p {
@@ -79,6 +79,14 @@
 
     .hero__content-socials {
         padding-right: 0rem;
+    }
+
+    .hero__content h1 {
+        text-align: center;
+    }
+
+    .hero__content p {
+        text-align: center;
     }
 }
 
