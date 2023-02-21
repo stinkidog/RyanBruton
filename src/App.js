@@ -1,4 +1,5 @@
 import './App.css';
+import React from 'react';
 
 import { AboutMe, Blog, Contact, Footer, Header, Home } from './Containers';
 import { BlogPost, Hero, NavBar } from './Components';
@@ -9,7 +10,7 @@ const App = () => {
             <div className="gradient__bg">
                 <Header />
                 <Home />
-                {/*<AboutMe />*/}
+                <AboutMe />
                 {/*<Blog />*/}
                 {/*<Contact />*/}
                 <Footer />

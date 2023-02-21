@@ -2,6 +2,7 @@ import './Hero.css';
 import heroImage from '../../Assets/SeatedPortrait.png';
 import { FaGithub, FaYoutube, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { IconContext } from "react-icons";
+import React from 'react';
 
 const Hero = () => {
     return (

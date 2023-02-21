@@ -1,6 +1,7 @@
 import './Footer.css';
 import { FaGithub, FaYoutube, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { IconContext } from "react-icons";
+import React from 'react';
 
 const Footer = () => {
     return (
@@ -8,7 +9,7 @@ const Footer = () => {
             <div className="footer__copyright">
                 <p>Copyright Ryan Bruton &copy;</p>
             </div>
-            <IconContext.Provider value={{ color: "#231F20", size: "1.5em", className: "social" }}>
+            <IconContext.Provider value={{ color: "#4b4b4b", size: "1.5em", className: "social" }}>
                 <div className="footer__socials">
                     <a href="https://github.com/stinkidog" target="_blank" rel="noreferrer">
                         <FaGithub />
