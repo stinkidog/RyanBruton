@@ -1,0 +1,9 @@
+.blogCardContainer {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    overflow: hidden;
+    padding-bottom: 5rem;
+}

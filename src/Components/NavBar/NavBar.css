@@ -58,6 +58,10 @@
     position: relative;
 }
 
+    .link:active {
+        transform: translateY(1px);
+    }
+
 .active-link::after {
     position: absolute;
     content: "";
