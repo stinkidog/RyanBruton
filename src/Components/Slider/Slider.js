@@ -5,7 +5,8 @@ import './Slider.css';
 
 const Slider = (props) => {
 
-    const [current, setCurrent] = useState(0);
+    //use 1 to get centered item. artificially swap latest blog post with 2nd to make it the focus
+    const [current, setCurrent] = useState(1);
 
     const handlePreviousClick = () => {
         const previous = current - 1;

@@ -27,12 +27,6 @@ const BlogCardContainer = () => {
         },
     ];
 
-    //{
-    //    cards.map(card =>
-    //        <BlogCard {...card} />
-    //    )
-    //}
-
     return (
         <div className="blogCardContainer">
             <Slider heading="Example Slider" slides={cards} />
