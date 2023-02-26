@@ -4,7 +4,7 @@
     --color-primary: #6b7a8f;
     --color-secondary: #101118;
     --color-accent: #1d1f2f;
-    --color-focus: #6d64f7;
+    --color-focus: aqua;
     --base-duration: 600ms;
     --base-ease: cubic-bezier(0.25, 0.46, 0.45, 0.84);
 }
@@ -31,9 +31,9 @@ h1, h2, h3 {
 
     .btn:focus {
         outline-color: var(--color-focus);
-        outline-offset: 2px;
+        outline-offset: 1px;
         outline-style: solid;
-        outline-width: 3px;
+        outline-width: 1px;
     }
 
     .btn:active {
@@ -52,7 +52,7 @@ h1, h2, h3 {
         --size: 3rem;
         align-items: center;
         background-color: transparent;
-        border: 3px solid transparent;
+        border: 2px solid transparent;
         border-radius: 100%;
         display: flex;
         height: var(--size);
@@ -70,14 +70,13 @@ h1, h2, h3 {
     }
 
 .slider {
-    --slide-width: 50vmin;
+    --slide-width: 40vmin;
     --slide-margin: 3vmin;
-    --slide-height: 70vmin;
-    height: 70vmin;
+    --slide-height: 60vmin;
+    height: var(--slide-height);
     margin: 0 auto;
     position: relative;
     width: var(--slide-width);
-    border: 1px solid green;
 }
 
 .slider__wrapper {
@@ -133,14 +132,13 @@ h1, h2, h3 {
     user-select: auto;
 }
 
-/*@media (hover: hover) {
+@media (hover: hover) {
     .slide--current:hover .slide__image-wrapper {
         transform: scale(1.025) translate(calc(var(--x) / var(--d) * 1px), calc(var(--y) / var(--d) * 1px));
     }
-}*/
+}
 
 .slide__image-wrapper {
-    border: 1px solid red;
     border-radius: 1%;
     height: 100%;
     left: 0%;
@@ -165,11 +163,11 @@ h1, h2, h3 {
     width: 100%;
 }
 
-/*@media (hover: hover) {
+@media (hover: hover) {
     .slide--current .slide__image {
         transform: translate(calc(var(--x) / var(--d) * 1px), calc(var(--y) / var(--d) * 1px));
     }
-}*/
+}
 
 .slide__headline {
     font-size: 5vmin;
@@ -191,11 +189,11 @@ h1, h2, h3 {
     visibility: visible;
 }
 
-/*@media (hover: hover) {
+@media (hover: hover) {
     .slide--current .slide__content {
         transform: translate(calc(var(--x) / var(--d) * -1px), calc(var(--y) / var(--d) * -1px));
     }
-}*/
+}
 
 .slide__content > * + * {
     margin-top: 2rem;
