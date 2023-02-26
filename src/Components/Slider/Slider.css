@@ -7,6 +7,9 @@
     --color-focus: aqua;
     --base-duration: 600ms;
     --base-ease: cubic-bezier(0.25, 0.46, 0.45, 0.84);
+    --slide-width: 40vmin;
+    --slide-margin: 3vmin;
+    --slide-height: 60vmin;
 }
 
 h1, h2, h3 {
@@ -70,9 +73,6 @@ h1, h2, h3 {
     }
 
 .slider {
-    --slide-width: 40vmin;
-    --slide-margin: 3vmin;
-    --slide-height: 60vmin;
     height: var(--slide-height);
     margin: 0 auto;
     position: relative;
@@ -206,5 +206,32 @@ h1, h2, h3 {
 
     to {
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1050px){
+
+    .slide__headline {
+        font-size: 5vmin;
+        font-weight: 600;
+        position: relative;
+    }
+
+    .btn {
+        padding: 0.5rem 1.5rem 0.5rem;
+    }
+
+}
+
+@media screen and (max-width: 700px){
+    :root {
+        --slide-width: 60vmin;
+        --slide-height: 90vmin;
+    }
+
+    .slide__headline {
+        font-size: 6vmin;
+        font-weight: 600;
+        position: relative;
     }
 }
