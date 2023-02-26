@@ -1,0 +1,13 @@
+.blogCard {
+    position: relative;
+    height: 500px;
+}
+
+.blogCard__image {
+    height: auto;
+    width: 80%;
+}
+
+.blogCard__title {
+    position: absolute;
+}

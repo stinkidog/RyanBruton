@@ -1,0 +1,16 @@
+.blog {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.blog__title {
+    color: white;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 107px;
+    text-align: center;
+    padding-top: 0rem;
+}
