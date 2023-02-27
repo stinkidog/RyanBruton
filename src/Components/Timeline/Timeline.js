@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Chrono } from "react-chrono";
+import { useSwipeable } from 'react-swipeable';
 import './Timeline.css';
-import Anoto from '../../Assets/anoto-logo-vector.png';
-import RedBull from '../../Assets/47-478129_aston-martin-red-bull-racing-logo-hd-png.png';
-import Checkatrade from '../../Assets/checkatrade-no-strapline-1024x277.png';
+import Anoto from '../../Assets/AnotoLogo.png';
+import RedBull from '../../Assets/RedBullLogo.png';
+import Checkatrade from '../../Assets/CheckatradeLogo.png';
 
 const Timeline = () => {
 
@@ -53,14 +54,32 @@ const Timeline = () => {
         },
     ];
 
+    const [itemIndex, setItemIndex] = useState(0);
+
+    const updateItemIndex = (direction) => {
+
+        direction === "right"
+            ? setItemIndex(itemIndex > 0 ? itemIndex - 1 : itemIndex)
+            : setItemIndex(itemIndex < (items.length - 1) ? itemIndex + 1 : itemIndex)
+    }
+
+    const handlers = useSwipeable({
+        onSwipedRight: () => updateItemIndex("right"),
+        onSwipedLeft: () => updateItemIndex("left"),
+        swipeDuration: 500,
+        preventScrollOnSwipe: true,
+        trackMouse: true
+    });
+
     return (
-        <div className="timeline">
+        <div {...handlers} className="timeline">
             <Chrono items={items}
                 mode="HORIZONTAL"
                 classNames={{
                     title: 'timeline__title',
                     card: 'timeline__card'
                 }}
+                activeItemIndex={itemIndex}
                 />
         </div>
     );

@@ -17,7 +17,7 @@ const Hero = () => {
                     <p>Can be found riding around on an eboard</p>
                     <p>Generally has too many interests</p>
                 </div>
-                <IconContext.Provider value={{ color: "white", size: "2em", className: "social" }}>
+                <IconContext.Provider value={{ color: "#4b4b4b", size: "2em", className: "social" }}>
                     <div className="hero__content-socials">
                         <a href="https://github.com/stinkidog" target="_blank" rel="noreferrer">
                             <FaGithub />

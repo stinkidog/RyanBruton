@@ -1,12 +1,21 @@
 import React, { useState } from 'react';
 import Slide from './Slide.js';
 import SliderControl from './SliderControl.js';
+import { useSwipeable } from 'react-swipeable';
 import './Slider.css';
 
 const Slider = (props) => {
 
     //use 1 to get centered item. artificially swap latest blog post with 2nd to make it the focus
     const [current, setCurrent] = useState(1);
+
+    const handlers = useSwipeable({
+        onSwipedLeft: () => handleNextClick(),
+        onSwipedRight: () => handlePreviousClick(),
+        swipeDuration: 500,
+        preventScrollOnSwipe: true,
+        trackMouse: true
+    });
 
     const handlePreviousClick = () => {
         const previous = current - 1;
@@ -38,7 +47,7 @@ const Slider = (props) => {
     }
 
     return (
-        <div className='slider' aria-labelledby={headingId}>
+        <div {...handlers} className='slider' aria-labelledby={headingId}>
             <ul className="slider__wrapper" style={wrapperTransform}>
                 {props.slides.map(slide => {
                     return (
