@@ -13,11 +13,11 @@ const Hero = () => {
                 <div className="hero__content-p">
                     <p>That does handstands</p>
                     <p>Plays a lot of guitar</p>
-                    <p>Seeking self improvement</p>
+                    <p>Always looking to improve</p>
                     <p>Can be found riding around on an eboard</p>
-                    <p>Generally has too many interests</p>
+                    <p>Too many interests, not enough time</p>
                 </div>
-                <IconContext.Provider value={{ color: "#4b4b4b", size: "2em", className: "social" }}>
+                <IconContext.Provider value={{ color: "rgb(255 255 255 / 22%)", size: "2em", className: "social" }}>
                     <div className="hero__content-socials">
                         <a href="https://github.com/stinkidog" target="_blank" rel="noreferrer">
                             <FaGithub />

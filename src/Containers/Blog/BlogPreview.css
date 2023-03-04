@@ -14,3 +14,8 @@
     text-align: center;
     padding-top: 0rem;
 }
+
+.blog__container {
+    width: 80%;
+    display: inline-block;
+}

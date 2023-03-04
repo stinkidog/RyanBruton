@@ -17,6 +17,7 @@ a {
 
 .gradient__bg {
     background: var(--color-bg);
+    text-align: center;
 }
 
 .section__padding {

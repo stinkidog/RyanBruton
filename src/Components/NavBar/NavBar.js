@@ -6,6 +6,7 @@ import { useState } from 'react';
 const NavBar = () => {
 
     const [toggleMenu, setToggleMenu] = useState(false);
+    const [bgColour, setBgColour] = useState("#ffffff00");
 
     const toggleActive = (e) => {
 
@@ -23,8 +24,23 @@ const NavBar = () => {
         }
     }
 
+    const changeNavbarBg = () => {
+        if (window.scrollY >= 83) {
+            setBgColour("#070630");
+        }
+        else {
+            setBgColour("#ffffff00");
+        }
+    }
+
+    const bgStyle = {
+        background: bgColour
+    };
+
+    window.addEventListener('scroll', changeNavbarBg);
+
     return (
-        <div className="header__navbar">
+        <div className="header__navbar" style={bgStyle}>
             <div className="header__navbar-container">
                 <a className="link active-link" onClick={toggleActive} href="#home">Home</a>
                 <a className="link" onClick={toggleActive} href="#about">About</a>

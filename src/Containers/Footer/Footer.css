@@ -1,9 +1,9 @@
-.footer{
+.footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: #0A0A0A;
+    background: #05032a;
     height: 83px;
 }
 
@@ -34,13 +34,25 @@
         flex: 0;
     }
 
+    .footer__copyright p {
+        display: flex;
+    }
+
     .footer__socials {
         padding-right: 2rem;
     }
 }
 
 @media screen and (max-width: 550px){
+    .footer::after {
+        flex: 0;
+    }
+
     .footer__copyright p {
         font-size: 12px;
+    }
+
+    .footer__copyright {
+        padding-left: 2rem;
     }
 }

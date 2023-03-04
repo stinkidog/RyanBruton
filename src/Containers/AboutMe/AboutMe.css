@@ -15,6 +15,13 @@
     padding-top: 3rem;
 }
 
+.about__wrapper {
+    display: inline-block;
+    width: 80%;
+    background: #0909187a;
+    border-radius: 2%;
+}
+
 @media screen and (max-width: 1050px) {
 
     .about__title{

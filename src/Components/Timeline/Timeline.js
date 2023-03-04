@@ -17,9 +17,11 @@ const Timeline = () => {
                         <img src={RedBull} className="timeline__custom-card-image" />
                     </div>
                     <div className="timeline__custom-card-text">
-                        Offering support to the aerodynamics department by producing and altering software to suit their requirements.\
-                        • Working with Visual Studio, Matlab, and SQL Server management studio on daily basis.\
-                        • Producing software in a fast paced environment managing all aspects of development(design, code, testing, etc)
+                        <h4>June 2015 - July 2016</h4><br />
+
+                        Worked as a junior member of the aerodynamics department. Exposed to a highly demanding and fast paced environment full of passionate engineers.
+                        Notable achievement would be improving load times of aero images by some factor of around 500%.
+                        Accomplished by caching parts of the kriging interpolation algorithm used in generating the images.
                     </div>
                 </div>,
         },
@@ -31,10 +33,11 @@ const Timeline = () => {
                         <img src={Anoto} className="timeline__custom-card-image" />
                     </div>
                     <div className="timeline__custom-card-text">
-                        • Full stack developer, involved in creating an enterprise system to manage the possibilities offered by a digital pen. \
-                        • Daily work involves using the ASP.NET and Angular frameworks, developing both back and front end as required.\
-                        • Front end work utilizes technologies such as Javascript, CSS, Redux, AJAX, HTML, and Kendo.\
-                        • Back end work written in .NET, applying common design patterns and adhering to SOLID principles.Development undertaken with performance, scale, security, and user experience all in mind.
+                        <h4>June 2017 - June 2018</h4><br />
+
+                        Full stack role, working on both the existing and greenfield enterprise systems used to manage a digital pen offering.
+                        Classic 3 tier architecture, using Microsoft SQL server, .NET, and Angular frameworks.
+                        Key work was designing and building a web canvas drag and drop tool, that allowed users to define a custom workflow of how their written data would be processed on submit.
                     </div>
                 </div>
         },
@@ -46,9 +49,11 @@ const Timeline = () => {
                         <img src={Checkatrade} className="timeline__custom-card-image" />
                     </div>
                     <div className="timeline__custom-card-text">
-                        Joined an original team of around 20 developers and watched as we've grown to a team of 150 plus\
-                        • Exposed to a wide, wide range of technologies as various CTO's have looked to implement their style\
-                        • Currently transforming a localized monolith into a cloud based microservice architecture.So far this has been a complete success where many businesses would fail
+                        <h4>October 2018 - Present</h4><br />
+
+                        Could write a book on my time here so far. Starting as a small team of 20 developers, on site servers, and legacy systems, to a now 100+ engineering team 
+                        that has migrated into using a modern cloud microservices architecture. During my time here I begun expanding beyond technical skills and valuing the 
+                        importance of process and delivering quality business value. Something that can only be achieved through open and honest communication.
                     </div>
                 </div>
         },
