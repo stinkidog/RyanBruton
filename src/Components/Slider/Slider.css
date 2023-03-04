@@ -22,21 +22,18 @@ h1, h2, h3 {
 }
 
 .btn {
-    background-color: var(--color-primary);
+    background-color: #ffffff;
     border: none;
-    border-radius: 0.125rem;
-    color: white;
+    border-radius: 20rem;
+    color: black;
     cursor: pointer;
-    font-family: inherit;
-    font-size: inherit;
+    font-family: 'Matter';
+    font-weight: 300;
     padding: 1rem 2.5rem 1.125rem;
 }
 
     .btn:focus {
-        outline-color: var(--color-focus);
         outline-offset: 1px;
-        outline-style: solid;
-        outline-width: 1px;
     }
 
     .btn:active {
@@ -170,8 +167,10 @@ h1, h2, h3 {
 }
 
 .slide__headline {
-    font-size: 5vmin;
-    font-weight: 600;
+    font-family: 'Matter';
+    font-size: 4vmin;
+    font-weight: 400;
+    filter: drop-shadow(10px 15px 4px rgba(0, 0, 0, 0.25));
     position: relative;
 }
 

@@ -9,20 +9,20 @@ const BlogCardContainer = () => {
     const cards = [
         {
             index: 0,
-            title: "1. How this man overcame his leagueadego and got ripped",
-            category: "Gaming",
+            title: "Coming Soon",
+            category: "Life",
             image: Goggins
         },
         {
             index: 1,
-            title: "2. How this man overcame his leagueadego and got ripped",
-            category: "Gaming",
+            title: "Coming Soon",
+            category: "Life",
             image: Goggins
         },
         {
             index: 2,
-            title: "3. How this man overcame his leagueadego and got ripped",
-            category: "Gaming",
+            title: "Coming Soon",
+            category: "Life",
             image: Goggins
         },
     ];

@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="footer__copyright">
                 <p>Copyright Ryan Bruton &copy;</p>
             </div>
-            <IconContext.Provider value={{ color: "#4b4b4b", size: "1.5em", className: "social" }}>
+            <IconContext.Provider value={{ color: "rgb(255 255 255 / 22%)", size: "1.5em", className: "social" }}>
                 <div className="footer__socials">
                     <a href="https://github.com/stinkidog" target="_blank" rel="noreferrer">
                         <FaGithub />
