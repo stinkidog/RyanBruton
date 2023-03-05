@@ -1,7 +1,7 @@
 import './NavBar.css';
 import React from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const NavBar = () => {
 
@@ -24,20 +24,25 @@ const NavBar = () => {
         }
     }
 
-    const changeNavbarBg = () => {
-        if (window.scrollY >= 83) {
-            setBgColour("#070630");
-        }
-        else {
-            setBgColour("#ffffff00");
-        }
-    }
-
     const bgStyle = {
         background: bgColour
     };
 
-    window.addEventListener('scroll', changeNavbarBg);
+    useEffect(() => {
+
+        const changeNavbarBg = () => {
+
+            window.scrollY >= 83 
+                ? setBgColour("#070630")
+                : setBgColour("#ffffff00");
+        }
+
+        window.addEventListener('scroll', changeNavbarBg);
+
+        return () => {
+            window.removeEventListener('scroll', changeNavbarBg);
+        };
+    })
 
     return (
         <div className="header__navbar" style={bgStyle}>

@@ -24,11 +24,6 @@
     font-size: 18px;
 }
 
-.footer__socials {
-    display: flex;
-    gap: 1rem;
-}
-
 @media screen and (max-width: 1050px) {
     .footer::after {
         flex: 0;
@@ -36,10 +31,6 @@
 
     .footer__copyright p {
         display: flex;
-    }
-
-    .footer__socials {
-        padding-right: 2rem;
     }
 }
 
