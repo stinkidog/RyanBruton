@@ -88,7 +88,7 @@
     border-top-right-radius: 3px;
 }
 
-.link:hover::after {
+/*.link:hover::after {
     position: absolute;
     content: "";
     height: 3px;
@@ -99,7 +99,7 @@
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     animation: appear 0.1s linear;
-}
+}*/
 
 @keyframes appear{
     from {
@@ -141,7 +141,7 @@
         padding-bottom: 3px;
     }
 
-    .link:hover::after {
+/*    .link:hover::after {
         position: absolute;
         content: "";
         height: 2px;
@@ -152,5 +152,5 @@
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;
         animation: appear 0.1s linear;
-    }
+    }*/
 }
