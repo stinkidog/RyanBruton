@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
+import './NavBar.css';
 
 const ScrollHighlightNav = (props) => {
 
     const [bgColour, setBgColour] = useState("#ffffff00");
     const [activeIndex, setActiveIndex] = useState(0);
+    const [toggleMenu, setToggleMenu] = useState(false);
+
 
     const nearestIndex = (
         currentPosition,
@@ -104,6 +108,26 @@ const ScrollHighlightNav = (props) => {
                         {link.title}
                     </a>
                 ))}
+            </div>
+            <div className="header__navbar-menu">
+                {toggleMenu
+                    ? <RiCloseLine color="#fff" size={30} onClick={() => setToggleMenu(false)} />
+                    : <RiMenu3Line color="#fff" size={30} onClick={() => setToggleMenu(true)} />}
+                {toggleMenu && (
+                    <div className="header__navbar-menu_container">
+                        <div className="header__navbar-menu_container-links">
+                        {props.links.map((link, index) => (
+                    <p><a
+                        key={link.id}
+                        className={activeIndex === index ? "link active-link" : "link"}
+                        href={`#${link.id}`}
+                    >
+                        {link.title}
+                    </a></p>
+                ))}
+                        </div>
+                    </div>
+                )}
             </div>
         </div>
     );
