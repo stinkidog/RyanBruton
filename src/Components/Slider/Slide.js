@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { Link } from "react-router-dom";
 import './Slider.css';
 
 const Slide = (props) => {
@@ -26,7 +27,7 @@ const Slide = (props) => {
         event.target.style.opacity = 1;
     }
 
-    const { image, title, index } = props.slide
+    const { image, title, index, id } = props.slide
     const current = props.current
     let classNames = 'slide'
 
@@ -53,7 +54,11 @@ const Slide = (props) => {
 
             <article className="slide__content">
                 <h2 className="slide__headline">{title}</h2>
-                <button className="slide__action btn">Read Now</button>
+                <button className="slide__action btn">
+                    <Link to={`blog/${id}`}>
+                        Read Now
+                    </Link>
+                </button>
             </article>
         </li>
     )
