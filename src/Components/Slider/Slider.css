@@ -40,6 +40,14 @@ h1, h2, h3 {
         transform: translateY(1px);
     }
 
+.slider__viewAll {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: calc(100% + 5rem);
+    width: 100%;
+}
+
 .slider__controls {
     display: flex;
     justify-content: center;

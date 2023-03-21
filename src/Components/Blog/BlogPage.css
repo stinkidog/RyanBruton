@@ -1,0 +1,17 @@
+.blogPage {
+    display: flex;
+    flex-direction: row;
+}
+
+.blogPage__image-container {
+    display: flex;
+    flex: 1;
+}
+
+.blogPage__image {
+    height: 625px;
+    filter: drop-shadow(10px 15px 4px rgba(0, 0, 0, 0.25));
+    z-index: 0;
+    border-radius: 1%;
+    margin-left: 10%;
+}

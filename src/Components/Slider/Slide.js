@@ -20,23 +20,24 @@ const Slide = (props) => {
     }
 
     const handleSlideClick = () => {
-        props.handleSlideClick(props.slide.index);
+        props.handleSlideClick(props.slide.id);
     }
 
     const imageLoaded = (event) => {
         event.target.style.opacity = 1;
     }
 
-    const { image, title, index, id } = props.slide
+    const { image, title, id } = props.slide
     const current = props.current
     let classNames = 'slide'
 
-    if (current === index) classNames += ' slide--current'
-    else if (current - 1 === index) classNames += ' slide--previous'
-    else if (current + 1 === index) classNames += ' slide--next'
+    if (current === id) classNames += ' slide--current'
+    else if (current - 1 === id) classNames += ' slide--previous'
+    else if (current + 1 === id) classNames += ' slide--next'
 
     return (
         <li
+            key={id}
             ref={slide}
             className={classNames}
             onClick={handleSlideClick}
@@ -47,7 +48,7 @@ const Slide = (props) => {
                 <img
                     className="slide__image"
                     alt={title}
-                    src={image}
+                    src={`./BlogImages/${image}`}
                     onLoad={imageLoaded}
                 />
             </div>

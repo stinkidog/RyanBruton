@@ -52,7 +52,7 @@ const Slider = (props) => {
                 {props.slides.map(slide => {
                     return (
                         <Slide
-                            key={slide.index}
+                            key={slide.id}
                             slide={slide}
                             current={current}
                             handleSlideClick={handleSlideClick}
@@ -73,6 +73,9 @@ const Slider = (props) => {
                     title="Go to next slide"
                     handleClick={handleNextClick}
                 />
+            </div>
+            <div className="slider__viewAll">
+                <h3>View All</h3>
             </div>
         </div>
     );

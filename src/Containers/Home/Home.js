@@ -36,7 +36,6 @@ const Home = React.forwardRef((props, ref) => {
                 <Hero ref={homeRef} />
                 <AboutMe ref={aboutRef} />
                 <BlogPreview ref={blogRef} />
-                {/*<Contact />*/}
                 <Footer />
             </div>
         </div>
