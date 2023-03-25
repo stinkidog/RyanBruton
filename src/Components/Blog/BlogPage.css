@@ -3,15 +3,37 @@
     flex-direction: row;
 }
 
-.blogPage__image-container {
+.blogPage__hero {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.blogPage__hero-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.blogPage__hero-image {
     display: flex;
     flex: 1;
 }
 
 .blogPage__image {
-    height: 625px;
+    height: 500px;
     filter: drop-shadow(10px 15px 4px rgba(0, 0, 0, 0.25));
     z-index: 0;
     border-radius: 1%;
     margin-left: 10%;
+}
+
+.blogPage__hero-content h1, h2, h3, h4 {
+    color: white;
+}
+
+.blogPage__content p, ol {
+    color: white;
 }
