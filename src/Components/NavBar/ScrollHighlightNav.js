@@ -87,8 +87,6 @@ const ScrollHighlightNav = (props) => {
                 : setBgColour("#ffffff00");
         }
 
-        console.log("active index: ", activeIndex);
-
         window.addEventListener('scroll', changeNavbarBg);
 
         return () => {

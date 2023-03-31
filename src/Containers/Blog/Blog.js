@@ -4,6 +4,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import BlogPage from "../../Components/Blog/BlogPage";
 import BlogContent from '../../BlogContent/BlogContents.json';
+import StaticHighlightNav from "../../Components/NavBar/StaticHighlightNav";
 
 
 const Blog = () => {
@@ -11,13 +12,10 @@ const Blog = () => {
     const { id } = useParams();
     const [blogId, setBlogId] = useState(id);
     const [blogContent, setBlogContent] = useState({});
-    const blogRef = useRef();
 
     const blogNavLinks = [
         {
-            title: "Home",
-            ref: blogRef,
-            id: "blog"
+            title: "Home"
         }
     ];
 
@@ -28,8 +26,8 @@ const Blog = () => {
 
     return(
         <div className="App">
-            <div id="blog" ref={blogRef} className="gradient__bg">
-                <Header links={blogNavLinks} />
+            <div id="blog" className="gradient__bg">
+                <StaticHighlightNav links={blogNavLinks} />
                 <BlogPage blogData={blogContent} />
                 <Footer />
             </div>
