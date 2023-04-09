@@ -13,11 +13,10 @@ const BlogPage = (props) => {
                     <h2>{props.blogData.category}</h2>
                 </div>
             </div>
-            {/* <div className="blogPage__content">
-                <h1>{props.blogData.title}</h1>
-                <h4>{props.blogData.category}</h4>
-                <div dangerouslySetInnerHTML={{__html: props.blogData.html}} />
-            </div> */}
+            <hr class="divider" />
+            <div className="blogPage__content">
+                <div dangerouslySetInnerHTML={{__html: props.blogData.html}}></div>
+            </div>
         </div>
     );
 }
