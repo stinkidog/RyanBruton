@@ -197,7 +197,8 @@ blockquote span{
     }
 
     .blogPage__content img{
-        width: 100% !important;
+        max-width: 100% !important;
+        height: auto;
     }
 
     blockquote{
@@ -211,5 +212,18 @@ blockquote span{
         border-left:8px solid aqua ;
         line-height:1.6;
         position: relative;
-      }
+    }
+
+    .blogPage__image {
+        height: 400px;
+        filter: drop-shadow(10px 15px 4px rgba(0, 0, 0, 0.25));
+        z-index: 0;
+        border-radius: 1%;
+        margin-left: 0%;
+    }
+
+    .blogPage__hero-content h1{
+        font-size: 40px !important;
+        line-height: 40px !important;
+    }
 }
