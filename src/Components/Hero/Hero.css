@@ -1,9 +1,9 @@
-.hero{
+.hero {
     display: flex;
     flex-direction: row;
 }
 
-.hero__content{
+.hero__content {
     flex: 1;
     display: flex;
     justify-content: center;
@@ -11,7 +11,7 @@
     flex-direction: column;
 }
 
-.hero__content h1{
+.hero__content h1 {
     text-align: left;
     font-family: var(--font-family);
     font-style: normal;
@@ -20,7 +20,7 @@
     line-height: 107px;
 }
 
-.hero__content-title{
+.hero__content-title {
     color: #ffffff;
     padding-bottom: 1rem;
 }
@@ -84,15 +84,11 @@
     }
 }
 
-@media screen and (max-width: 550px){
+@media screen and (max-width: 550px) {
 
     .hero {
         flex-direction: column;
         gap: 2rem;
-    }
-
-    .section__padding {
-        padding: 1rem 2rem;
     }
 
     .hero__image-container {

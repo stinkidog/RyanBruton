@@ -7,7 +7,7 @@ import './Slider.css';
 const Slider = (props) => {
 
     //use 1 to get centered item. artificially swap latest blog post with 2nd to make it the focus
-    const [current, setCurrent] = useState(1);
+    const [current, setCurrent] = useState(props.slides.length == 1 ? 0 : 1);
 
     const handlers = useSwipeable({
         onSwipedLeft: () => handleNextClick(),
@@ -52,7 +52,7 @@ const Slider = (props) => {
                 {props.slides.map(slide => {
                     return (
                         <Slide
-                            key={slide.index}
+                            key={slide.id}
                             slide={slide}
                             current={current}
                             handleSlideClick={handleSlideClick}
@@ -73,6 +73,9 @@ const Slider = (props) => {
                     title="Go to next slide"
                     handleClick={handleNextClick}
                 />
+            </div>
+            <div className="slider__viewAll">
+                <h3>View All</h3>
             </div>
         </div>
     );

@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { Link } from "react-router-dom";
 import './Slider.css';
 
 const Slide = (props) => {
@@ -19,23 +20,24 @@ const Slide = (props) => {
     }
 
     const handleSlideClick = () => {
-        props.handleSlideClick(props.slide.index);
+        props.handleSlideClick(props.slide.id);
     }
 
     const imageLoaded = (event) => {
         event.target.style.opacity = 1;
     }
 
-    const { image, title, index } = props.slide
+    const { image, title, id } = props.slide
     const current = props.current
     let classNames = 'slide'
 
-    if (current === index) classNames += ' slide--current'
-    else if (current - 1 === index) classNames += ' slide--previous'
-    else if (current + 1 === index) classNames += ' slide--next'
+    if (current === id) classNames += ' slide--current'
+    else if (current - 1 === id) classNames += ' slide--previous'
+    else if (current + 1 === id) classNames += ' slide--next'
 
     return (
         <li
+            key={id}
             ref={slide}
             className={classNames}
             onClick={handleSlideClick}
@@ -46,14 +48,18 @@ const Slide = (props) => {
                 <img
                     className="slide__image"
                     alt={title}
-                    src={image}
+                    src={`./BlogImages/${image}`}
                     onLoad={imageLoaded}
                 />
             </div>
 
             <article className="slide__content">
                 <h2 className="slide__headline">{title}</h2>
-                <button className="slide__action btn">Read Now</button>
+                <button className="slide__action btn">
+                    <Link to={`blog/${id}`}>
+                        Read Now
+                    </Link>
+                </button>
             </article>
         </li>
     )
