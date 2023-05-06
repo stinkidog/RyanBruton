@@ -1,45 +1,44 @@
-import './Socials.css';
 import { FaGithub, FaYoutube, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { Box, IconButton } from "@mui/material";
 import { IconContext } from "react-icons";
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useTheme } from "@mui/material";
 
 const Socials = (props) => {
 
-    const [styling, setStyling] = useState({ paddingRight: window.innerWidth > 1050 ? props.right : props.responsiveRight });
+    const icons = [
+        { Icon: FaGithub, href: 'https://github.com' },
+        { Icon: FaYoutube, href: 'https://youtube.com' },
+        { Icon: FaTwitter, href: 'https://twitter.com' },
+        { Icon: FaLinkedin, href: 'https://linkedin.com' }
+    ];
 
-    useEffect(() => {
-        const handleResize = () => {
-
-            window.innerWidth > 1050
-                ? setStyling({ paddingRight: props.right })
-                : setStyling({ paddingRight: props.responsiveRight })
-        };
-
-        window.addEventListener('resize', handleResize)
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    });
-
+    const theme = useTheme();
 
     return (
-        <IconContext.Provider value={{ color: "rgb(255 255 255 / 22%)", size: props.size, className: "socials" }}>
-            <div className="socials__container" style={styling} >
-                <a href="https://github.com/stinkidog" target="_blank" rel="noreferrer">
-                    <FaGithub />
-                </a>
-                <a href="https://www.youtube.com/channel/UClCdnDtnhsKTX0nstHuEC3A" target="_blank" rel="noreferrer">
-                    <FaYoutube />
-                </a>
-                <a href="https://twitter.com/FreeRyanBruton" target="_blank" rel="noreferrer">
-                    <FaTwitter />
-                </a>
-                <a href="https://www.linkedin.com/in/theryanbruton/" target="_blank" rel="noreferrer">
-                    <FaLinkedin />
-                </a>
-            </div>
-        </IconContext.Provider>    
+        <IconContext.Provider value={{ size: props.size }}>
+            <Box display={"flex"} gap={"1"}>
+                {icons.map(( icon , Index) => (
+                    <IconButton
+                        key={Index}
+                        component="a"
+                        href={icon.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        sx={{
+                            color: theme.palette.primary.contrastTextAlpha,
+                            transition: "all .2s ease-in-out",
+                            "&:hover": {
+                                color: theme.palette.primary.contrastText,
+                                transform: "scale(1.2)"
+                            }
+                        }}
+                    >
+                        <icon.Icon />
+                    </IconButton>
+                ))}
+            </Box>
+        </IconContext.Provider>
     );
 }
 

@@ -3,20 +3,9 @@ import React, {createContext, useState} from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
-import MatterMed from './Assets/matter-font/Matter-Medium.otf';
 import NewHome from './Pages/NewHome';
 
 export const ThemeContext = createContext();
-
-// const matterMedium = {
-//     fontFamily: 'Matter',
-//     fontStyle: 'normal',
-//     fontWeight: '400',
-//     src: `
-//       local('Matter-Medium'),
-//       url(${MatterMed}) format('otf')
-//     `
-// };
 
 const darkTheme = createTheme({
     components: {
@@ -31,7 +20,9 @@ const darkTheme = createTheme({
     palette:{
         primary: {
             main: 'rgb(7, 6, 48)',
-            contrastText: '#FFFFFF'
+            dark: 'rgba(9,9,24,.5)',
+            contrastText: '#FFFFFF',
+            contrastTextAlpha: "rgb(255 255 255 / 22%)"
         },
         secondary: {
             main: '#00FFF0'
@@ -51,7 +42,8 @@ const lightTheme = createTheme({
         },
         primary: {
             main: '#FFFFFF',
-            contrastText: '#000000'
+            contrastText: '#000000',
+            contrastTextAlpha: '#000000'
         },
         secondary: {
             main: '#000000'
